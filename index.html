@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I LOVE HISTORY - Educational Portal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">📚 I LOVE HISTORY</div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#materials" class="nav-link">Study Materials</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#games" class="nav-link">Games</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="main-title">I LOVE HISTORY</h1>
+            <p class="subtitle">Interactive Learning Portal for American History</p>
+            <p class="description">Explore key periods in American and world history through engaging educational materials and interactive games</p>
+        </div>
+    </section>
+
+    <section id="materials" class="materials">
+        <div class="container">
+            <h2>Study Materials</h2>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="card-icon">🦅</div>
+                    <h3>Colonial America</h3>
+                    <p>Learn about early European settlements and colonial development</p>
+                    <button class="material-btn" onclick="openGame('colonial')">View Material</button>
+                </div>
+                <div class="material-card">
+                    <div class="card-icon">🇺🇸</div>
+                    <h3>American Revolution</h3>
+                    <p>Understand the causes and consequences of independence</p>
+                    <button class="material-btn" onclick="openGame('revolution')">View Material</button>
+                </div>
+                <div class="material-card">
+                    <div class="card-icon">⚔️</div>
+                    <h3>Civil War Era</h3>
+                    <p>Study the causes, events, and impact of the Civil War</p>
+                    <button class="material-btn" onclick="openGame('civilwar')">View Material</button>
+                </div>
+                <div class="material-card">
+                    <div class="card-icon">🏭</div>
+                    <h3>Industrial Revolution</h3>
+                    <p>Explore technological advancement and economic transformation</p>
+                    <button class="material-btn" onclick="openGame('industrial')">View Material</button>
+                </div>
+                <div class="material-card">
+                    <div class="card-icon">🌍</div>
+                    <h3>World War Era</h3>
+                    <p>Analyze America's role in global conflicts</p>
+                    <button class="material-btn" onclick="openGame('worldwars')">View Material</button>
+                </div>
+                <div class="material-card">
+                    <div class="card-icon">🚀</div>
+                    <h3>Modern America</h3>
+                    <p>Study contemporary history and current events</p>
+                    <button class="material-btn" onclick="openGame('modern')">View Material</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="timeline">
+        <div class="container">
+            <h2>Historical Timeline</h2>
+            <div class="timeline-content">
+                <div class="timeline-item">
+                    <div class="timeline-date">1607</div>
+                    <div class="timeline-text">Founding of Jamestown, the first permanent English settlement</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1776</div>
+                    <div class="timeline-text">Declaration of Independence and birth of the United States</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1861-1865</div>
+                    <div class="timeline-text">American Civil War reshapes the nation</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1917</div>
+                    <div class="timeline-text">United States enters World War I</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1941-1945</div>
+                    <div class="timeline-text">America's involvement in World War II</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">1960s-Present</div>
+                    <div class="timeline-text">Civil Rights Movement and modern American society</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="games" class="games">
+        <div class="container">
+            <h2>Game Library</h2>
+            <p class="games-description">Play a wide variety of games while learning history</p>
+            
+            <div class="games-filter">
+                <button class="filter-btn active" onclick="filterGames('all')">All Games</button>
+                <button class="filter-btn" onclick="filterGames('puzzle')">Puzzle</button>
+                <button class="filter-btn" onclick="filterGames('action')">Action</button>
+                <button class="filter-btn" onclick="filterGames('strategy')">Strategy</button>
+                <button class="filter-btn" onclick="filterGames('classic')">Classic</button>
+            </div>
+
+            <div id="gamesGrid" class="games-grid">
+                <!-- Games loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 I LOVE HISTORY - Educational Portal. Created for high school students.</p>
+        <p>Contact: education@ilovehist.edu</p>
+    </footer>
+
+    <!-- Game Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeGame()">&times;</span>
+            <h2 id="modalTitle">Loading...</h2>
+            <div class="game-container" id="gameContainer">
+                <!-- Games loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
