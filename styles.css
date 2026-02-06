@@ -1,0 +1,10 @@
+.body {
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    animation: backgroundAnimation 10s ease infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
